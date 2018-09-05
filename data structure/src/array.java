@@ -29,5 +29,18 @@ public class array {
 		System.out.println("");
 		
 		//-------------------------------------------------------
+		
+		searchKey	=	33;			//	find item with key 66
+		for(j=0;j<nElems;j++)       //	for each element,
+			if(arr[j] == searchKey)	//	found item?
+				break;				//	yes, exit before end
+		if(j == nElems)				//	at the end?
+			System.out.println("Can't find "+ searchKey); //yes
+		else
+			System.out.println("Found "+searchKey);
+		
+		//-------------------------------------------------------
+		
+		
 	}
 }
