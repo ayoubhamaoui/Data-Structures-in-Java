@@ -21,7 +21,7 @@ public class array {
 		arr[7]	=	96;
 		arr[8]	=	12;
 		arr[9]	=	29;
-		nElems	=	arr.length;			// new we have 10 items in array
+		nElems	=	10;			// new we have 10 items in array
 		
 		//-------------------------------------------------------
 		for(j=0;j<nElems;j++)		//	display items
@@ -41,6 +41,19 @@ public class array {
 		
 		//-------------------------------------------------------
 		
+		//we suppose searchKey is present on array
+		searchKey	=	78;			//delete item with key 78
+		for(j=0;j<nElems;j++)
+			if(arr[j] == searchKey)
+				break;
+		for(int k=j;k<nElems-1;k++)	//	move higher ones down
+			arr[k]	=	arr[k+1];
+		nElems--;						//	decrement size
 		
+		//-------------------------------------------------------
+		
+		for(j=0;j<nElems;j++)
+			System.out.print(arr[j]+"\t");
+		System.out.println("");
 	}
 }
